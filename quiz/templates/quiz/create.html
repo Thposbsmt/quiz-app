@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Create Quiz{% endblock %}
+{% block content %}
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <script>
+        function getRandomQuestion(){
+            fetch('https://opentdb.com/api.php?amount=1&type=boolean')
+                .then((response) => response.json())
+                .then(data => {
+                    var textArea = document.getElementById("id_question");
+                    textArea.value = data['results'][0]['question']
+                    var inpt = document.getElementById("id_correct_answer")
+                    inpt.value = data['results'][0]['correct_answer']
+                });
+        }
+    </script>
+    <input type="button" value="Random question" onclick="getRandomQuestion()">
+    <input type="submit" value="Save">
+</form>
+{% endblock %}
