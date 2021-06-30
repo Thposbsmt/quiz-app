@@ -2,11 +2,11 @@
 It is simple django based quiz app.
 
 ## Snaps of project
-![1](https://imgur.com/a/uqGnF7R)
-![2](https://imgur.com/a/iV8M8su)
-![3](https://imgur.com/a/qVU5Npa)
-![4](https://imgur.com/a/iyo7BQ2)
-![5](https://imgur.com/a/ntcPJwl)
+[1](https://imgur.com/a/uqGnF7R)
+[2](https://imgur.com/a/iV8M8su)
+[3](https://imgur.com/a/qVU5Npa)
+[4](https://imgur.com/a/iyo7BQ2)
+[5](https://imgur.com/a/ntcPJwl)
 
 # Instructions
 1) ### Installations
