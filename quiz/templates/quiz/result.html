@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Result{% endblock %}
+{% block content %}
+    {% if counter == 3 %}
+    You passed the test for {{ counter }} / 3! Congritulations!
+    {% else %}
+    {{ counter }} / 3. You failed the test.
+    {% endif %}
+{% endblock %}

@@ -2,13 +2,19 @@
 {% load static %}
 {% block title %}Test{% endblock %}
 {% block content %}
-    {% for qq in quizes %}
-        <b class="font-weight-bold">{{ qq.question }}</b>
-        <form>
-            <input type="radio" name='test' value='True'>True</input>
-            <input type="radio" name='test' value='False'>False</input>
-        </form>
-        <br/>
-    {% endfor %}
-    <a class='btn btn-primary'>Submit</a>
+<form method="POST">
+    {% csrf_token %}
+    <b class="font-weight-bold">{{ quizes.0.question }}</b>
+    {{ form1.as_table }}
+
+    <b class="font-weight-bold">{{ quizes.1.question }}</b>
+    {{ form2.as_table }}
+
+    <b class="font-weight-bold">{{ quizes.2.question }}</b>
+    {{ form3.as_table }}
+    <input type="submit" class='btn btn-primary' value="Submit" >
+    <input name='hidden_answer0' value="{{ quizes.0.correct_answer }}" hidden/>
+    <input name='hidden_answer1' value="{{ quizes.1.correct_answer }}" hidden/>
+    <input name='hidden_answer2' value="{{ quizes.2.correct_answer }}" hidden/>
+</form>
 {% endblock %}
